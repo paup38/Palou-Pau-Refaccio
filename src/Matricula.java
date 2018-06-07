@@ -1,5 +1,9 @@
-import java.util.Collection;
+/**
+ * @author  Pau Palou
+ * @version 1.0
+ */
 
+import java.util.Collection;
 import java.util.Iterator;
 
 public class Matricula {
@@ -9,6 +13,10 @@ public class Matricula {
     public Matricula(){}
 
     public Matricula(long id, String nom, String cognoms, String dni, int curs, Collection assignatures) {
+        /**
+         * @see Fa referència a Estudiant
+         */
+
         this.estudiant.setId(id);
         this.estudiant.setNom(nom);
         this.estudiant.setCognoms(cognoms);
@@ -19,6 +27,12 @@ public class Matricula {
 
     public float costMatricula(){
 
+
+        /**
+         * @return Retorna el cost depenent dels credits
+         * @param cost
+         * @param credits
+         */
         float cost = 0;
         int credits = 0;
 

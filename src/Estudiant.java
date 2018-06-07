@@ -1,6 +1,13 @@
+/**
+ * @author  Pau Palou
+ * @version 1.0
+ */
+
 import java.util.Collection;
 
-public class Estudiant {
+public class Estudiant{
+
+
     private long id = 0;
     private String nom = "";
     private String cognoms = "";

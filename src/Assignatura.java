@@ -1,6 +1,12 @@
+/**
+ * @author  Pau Palou
+ * @version 1.0
+ */
+
 import java.util.ArrayList;
 
 public class Assignatura {
+
     public long id = 0;
     private String nom = "";
     private int hores = 0;
@@ -56,6 +62,12 @@ public class Assignatura {
     }
 
     public static void CostMatricula() {
+
+        /**
+         * @return Retorna el cost de la matricula
+         * @see Necesita cridar al metode costMatricula
+         */
+
         Assignatura ass1 = new Assignatura(1,"Xarxes",150,6,true);
         Assignatura ass2 = new Assignatura(2,"Sistemes Operatius",100,4,true);
         Assignatura ass3 = new Assignatura(2,"Entorns",75,3,true);
