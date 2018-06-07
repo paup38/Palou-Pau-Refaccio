@@ -1,24 +1,20 @@
 import java.util.Collection;
+
 import java.util.Iterator;
 
 public class Matricula {
 
-    public long id = 0;
-    private String nom = "";
-    private String cognoms = "";
-    private String dni = "";
-    private int curs = 0;
-    private Collection assignatures;
+    public final Estudiant estudiant = new Estudiant();
 
     public Matricula(){}
 
     public Matricula(long id, String nom, String cognoms, String dni, int curs, Collection assignatures) {
-        this.id = id;
-        this.nom = nom;
-        this.cognoms = cognoms;
-        this.dni = dni;
-        this.curs = curs;
-        this.assignatures = assignatures;
+        this.estudiant.setId(id);
+        this.estudiant.setNom(nom);
+        this.estudiant.setCognoms(cognoms);
+        this.estudiant.setDni(dni);
+        this.estudiant.setCurs(curs);
+        this.estudiant.setAssignatures(assignatures);
     }
 
     public float costMatricula(){
@@ -26,7 +22,7 @@ public class Matricula {
         float cost = 0;
         int credits = 0;
 
-        for (Iterator iter = assignatures.iterator(); iter.hasNext();) {
+        for (Iterator iter = estudiant.getAssignatures().iterator(); iter.hasNext();) {
             Assignatura element = (Assignatura) iter.next();
             credits = credits + element.credits;
         }
